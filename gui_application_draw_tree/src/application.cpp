@@ -3,8 +3,8 @@
 
 namespace gui_application_draw_tree {
     
-    Application::Application() 
-        : gui_application::GuiApplication(true)
+    Application::Application(bool enableGlDebugOutput) 
+        : gui_application::GuiApplication(enableGlDebugOutput)
         , time(*this)
         , cameras(*this)
         , entityBrowser(*this)

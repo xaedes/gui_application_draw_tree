@@ -21,7 +21,7 @@ namespace gui_application_draw_tree {
         using memory_pool_type = typename Drawable::memory_pool_type;
         using Transform = typename Drawable::Transform;
 
-        Application();
+        Application(bool enableGlDebugOutput = true);
         virtual ~Application();
         virtual void setup() override;
         virtual void frame() override;

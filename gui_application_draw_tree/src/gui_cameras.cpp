@@ -46,7 +46,7 @@ namespace gui_application_draw_tree {
             }
             bool changed = false;
             changed |= ImGui::SliderFloat("near", &projection->accessNearPlane(), 0, 100);
-            changed |= ImGui::SliderFloat("far", &projection->accessFarPlane(), 0, 5000);
+            changed |= ImGui::SliderFloat("far", &projection->accessFarPlane(), 0, 10000);
             if (changed)
             {
                 projection->update();
@@ -68,6 +68,7 @@ namespace gui_application_draw_tree {
             changed |= ImGui::SliderFloat("yaw",   &view.accessAngles().z, -3.14159 * 2, 3.14159 * 2);
             static float max_distance = 150;
             changed |= ImGui::SliderFloat("distance", &view.accessDistance(), 0, max_distance);
+            changed |= ImGui::Checkbox("swap y & z", &view.accessSwapYZ());
             if (view.distance() >= max_distance)
             {
                 max_distance = view.distance() + 20;

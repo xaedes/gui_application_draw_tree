@@ -177,7 +177,7 @@ namespace gui_application_draw_tree {
         //     projection.setFov(fov_deg * 3.14159 / 180);
         // }
         bool changed = false;
-        changed |= SliderFloatWithUnit("near", &projection.accessFov(), 0, 100, R2D);
+        changed |= SliderFloatWithUnit("fov", &projection.accessFov(), 0, 100, R2D);
         changed |= ImGui::SliderFloat("near", &projection.accessNearPlane(), 0, 100);
         changed |= ImGui::SliderFloat("far", &projection.accessFarPlane(), 0, 10000);
         if (changed)

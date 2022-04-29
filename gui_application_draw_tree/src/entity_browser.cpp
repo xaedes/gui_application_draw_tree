@@ -77,7 +77,7 @@ namespace gui_application_draw_tree {
 
         bool updatedEulerXYZ = false;
         updatedEulerXYZ |= ImGui::SliderFloat("euler.x", &eulerXYZ.x, -360, 360);
-        updatedEulerXYZ |= ImGui::SliderFloat("euler.y", &eulerXYZ.y, -(90-1e-3), (90 - 1e-3));
+        updatedEulerXYZ |= ImGui::SliderFloat("euler.y", &eulerXYZ.y, -(90-1e-3f), (90 - 1e-3f));
         updatedEulerXYZ |= ImGui::SliderFloat("euler.z", &eulerXYZ.z, -360, 360);
         if (updatedPosition)
         {
